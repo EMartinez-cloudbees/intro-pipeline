@@ -9,11 +9,14 @@ pipeline {
       }
     }
     stage('Deploy') {
+      options {
+        timeout(time: 1, unit: 'MINUTES')
+      }
       input {
-        message "Should we continue?"
+        message 'Should we continue?'
       }
       steps {
-        echo "Continuing with deployment"
+        echo 'Continuing with deployment'
       }
     }
   }
