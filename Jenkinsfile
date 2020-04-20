@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('Say Hello') {
       steps {
+        echo "Jeebus but this is torture."
         /*
         echo "Hello ${params.Name}!"
         echo "${TEST_USER_USR}"
