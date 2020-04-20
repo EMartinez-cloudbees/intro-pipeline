@@ -1,10 +1,15 @@
 pipeline {
   agent any
   stages {
-    stage('Say Hello') {
+    stage('Fizz') {
       steps {
-        echo 'Jeebus but this is torture.'
-        echo 'Committed by Jenkins'
+        echo 'stage Fizz'
+      }
+    }
+
+    stage('Buzz') {
+      steps {
+        echo 'stage Buzz'
       }
     }
 
