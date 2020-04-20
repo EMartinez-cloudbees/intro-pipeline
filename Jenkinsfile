@@ -4,7 +4,8 @@ pipeline {
     stage('Fizz') {
       steps {
         echo 'stage Fizz'
-        sh 'myVarSurvived=$(date); echo [${myVarSurvived}]'
+        sh 'export myVarSurvived=$(date); echo [${myVarSurvived}]'
+        sh 'echo "This shell is not a child of the previous shell: ${myVarSurvived}."'
       }
     }
 
