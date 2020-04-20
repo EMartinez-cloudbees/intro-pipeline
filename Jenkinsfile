@@ -8,6 +8,7 @@ pipeline {
         echo "${TEST_USER_PSW}"
       }
     }
+    /*
     stage('Get Kernel') {
       steps {
         script {
@@ -21,11 +22,15 @@ pipeline {
         
       }
     }
+    */
+    /*
     stage('Say Kernel') {
       steps {
         echo "${KERNEL_VERSION}"
       }
     }
+    */
+    /*
     stage('Testing') {
       failFast true
       parallel {
@@ -38,6 +43,7 @@ pipeline {
             sleep(time: 10, unit: 'SECONDS')
           }
         }
+      
         stage('Java 8') {
           agent {
             docker 'openjdk:8-jdk-alpine'
@@ -47,9 +53,12 @@ pipeline {
             sleep(time: 20, unit: 'SECONDS')
           }
         }
+        
       }
     }
+    */
   }
+/*
   environment {
     MY_NAME = 'Anand'
     TEST_USER = credentials('test-user')
@@ -64,4 +73,6 @@ pipeline {
   parameters {
     string(name: 'Name', defaultValue: 'whoever you are', description: 'Who should I say hi to?')
   }
+ */
+  
 }
