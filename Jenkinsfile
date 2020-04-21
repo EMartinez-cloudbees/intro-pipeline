@@ -4,14 +4,14 @@ pipeline {
     stage('Buzz Build') {
       steps {
         sh 'echo "stage Buzz Build $(date)"'
-        sh './jenkins/build.sh'
+        sh './build.sh'
       }
     }
 
     stage('Buzz Test') {
       steps {
         sh 'echo "stage Buzz Test $(date)"'
-        sh './jenkins/test-all.sh'
+        sh './test-all.sh'
       }
     }
     
