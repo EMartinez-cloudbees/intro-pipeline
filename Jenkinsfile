@@ -1,43 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('Fizz') {
+    stage('Buzz Build') {
       steps {
-        echo 'stage Fizz'
-        sh 'export myVarSurvived=$(date); echo [${myVarSurvived}]'
-        sh 'echo "This shell is not a child of the previous shell: ${myVarSurvived}."'
+        sh 'echo "stage Buzz Build $(date)"'
+        sh './jenkins/build.sh'
       }
     }
 
-    stage('Buzz') {
+    stage('Buzz Test') {
       steps {
-        echo 'stage Buzz'
-        sh 'echo Buzz $(date)'
+        sh 'echo "stage Buzz Test $(date)"'
+        sh './jenkins/test-all.sh'
       }
     }
-    
-    stage('EclipseHello') {
-      steps {
-        echo 'stage Eclipse Hello'
-        sh 'echo Hello $(date)'
-      }
-    }
-    
-    stage('Git to Jenkins Webhook Hello') {
-      steps {
-        echo 'Webhook Hello: 1:17pm changed webhook'
-        sh 'echo Hello $(date)'
-      }      
-    }
-    
-    stage('DevBranch') {
-        steps {
-          echo 'devElena'
-          sh 'echo Dev Branch $(date)'
-        }
-
-    }
-
     
     
   }
