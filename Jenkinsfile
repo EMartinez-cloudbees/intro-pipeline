@@ -24,7 +24,7 @@ pipeline {
       
     stage('Git to Jenkins Webhook Hello') {
       steps {
-        echo 'Webhook Hello'
+        echo 'Webhook Hello: 1:17pm changed webhook'
         sh 'echo Hello $(date)'
       }      
     }
