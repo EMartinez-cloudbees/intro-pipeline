@@ -21,6 +21,12 @@ pipeline {
         echo 'stage Eclipse Hello'
         sh 'echo Hello $(date)'
       }
+      
+    stage('Git to Jenkins Webhook Hello') {
+      steps {
+        echo 'Webhook Hello'
+        sh 'echo Hello $(date)'
+      }      
     }
 
   }
