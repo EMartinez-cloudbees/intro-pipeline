@@ -15,6 +15,13 @@ pipeline {
         sh 'echo Buzz $(date)'
       }
     }
+    
+    stage('EclipseHello') {
+      steps {
+        echo 'stage Eclipse Hello'
+        sh 'echo Hello $(date)'
+      }
+    }
 
   }
 }
