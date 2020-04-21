@@ -29,5 +29,16 @@ pipeline {
         sh 'echo Hello $(date)'
       }      
     }
+    
+    stage('DevBranch') {
+        steps {
+          echo 'devElena'
+          sh 'echo Dev Branch $(date)'
+        }
+
+    }
+
+    
+    
   }
 }
