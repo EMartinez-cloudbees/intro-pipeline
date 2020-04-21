@@ -12,6 +12,7 @@ pipeline {
       steps {
         sh 'echo "stage Buzz Build $(date)"'
         sh './build.sh'
+        archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
       }
     }
 
