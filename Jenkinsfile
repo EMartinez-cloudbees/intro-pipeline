@@ -28,5 +28,4 @@ pipeline {
         sh 'echo Hello $(date)'
       }      
     }
-  }
-}
+  }}}
